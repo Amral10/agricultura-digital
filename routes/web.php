@@ -26,7 +26,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/leituras', [LeituraController::class, 'index'])->name('leitura.index');
+    Route::get('/temperatura', [LeituraController::class, 'index'])->name('temperatura.index');
+    Route::get('/leituras', [LeituraController::class, 'leituras'])->name('leituras');
 });
 
 require __DIR__ . '/auth.php';

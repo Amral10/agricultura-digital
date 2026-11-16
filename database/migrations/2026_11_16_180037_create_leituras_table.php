@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('leituras', function (Blueprint $table) {
             $table->id();
             $table->string('sensor');
+            $table->string('tipo');
             $table->decimal('valor', 10, 2);
             $table->timestamps();
         });

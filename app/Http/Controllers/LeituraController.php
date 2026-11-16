@@ -12,15 +12,4 @@ class LeituraController extends Controller
         $leituras = Leitura::all();
         return response()->json($leituras);
     }
-
-    public function testStore()
-    {
-        $leitura = new Leitura();
-        $leitura->sensor = 'sensor1';
-        $leitura->valor = 25.5;
-        $leitura->save();
-
-        return response()->json(['message' => 'Leitura armazenada com sucesso!']);
-    }
-
 }

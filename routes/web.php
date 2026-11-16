@@ -27,7 +27,6 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/leituras', [LeituraController::class, 'index'])->name('leitura.index');
-    Route::get('/leituras/test-store', [LeituraController::class, 'testStore'])->name('leitura.test-store');
 });
 
 require __DIR__ . '/auth.php';
